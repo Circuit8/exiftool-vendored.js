@@ -1,0 +1,12 @@
+export declare function wgetString(url: string): Promise<string>;
+export declare function wgetFile(url: string, destinationFile: string): Promise<void>;
+export declare function readFile(filename: string): Promise<string>;
+export declare function writeFile(filename: string, content: string): Promise<void>;
+export declare function rename(before: string, after: string): Promise<void>;
+export declare function sha1(filename: string, expectedSha: string): Promise<string>;
+export declare function unzip(zipFile: string, destDir: string): Promise<void>;
+export declare function tarxzf(targzFile: string, destDir: string): Promise<void>;
+export declare function editPackageJson(packageJson: string, f: ((packageObj: any) => void)): Promise<void>;
+export declare function updatePackageVersion(packageJson: string, version: string): Promise<void>;
+export declare function rmrf(path: string, ignoreErrors?: boolean): Promise<void>;
+export declare function mkdir(path: string, ignoreErrors?: boolean): Promise<void>;
